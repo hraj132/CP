@@ -75,7 +75,7 @@ public:
                 }
             }
         }
-        sort(v.rbegin(),v.rend());
+        // sort(v.rbegin(),v.rend());
         long long ans=0,mod=1e9+7;
         for(int i=0;i<k;i++){
            ans+=1LL*v[i] *v[i]%mod;
