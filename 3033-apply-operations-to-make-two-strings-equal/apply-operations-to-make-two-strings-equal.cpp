@@ -14,13 +14,8 @@ public:
         }
         int m=s.size(),a=0;
         if(m%2)return -1;
-        ind[m]=1e9;
-        // for(int i=0;i<m-1;i+=2){
-        //     int dif=ind[i+1]-ind[i];
-        //     if(dif<2)a++;
-        //     else if(dif<x) a+=dif;
-        //     else a+=x;
-        // }
+        // ind[m]=1e9;
+        
         
         memset(dp,0x3f,sizeof(dp));
         
