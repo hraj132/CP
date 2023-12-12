@@ -1,5 +1,5 @@
 class Solution {
-    int dp[2003][2003], has[2003];
+    // int dp[2003][2003], has[2003];
     // string s,p; 
     int n,m;
 //     int rec(int i, int j){
@@ -23,20 +23,15 @@ class Solution {
     
     
 public:
-    bool isMatch(string s, string p){
-     // s=ss; p=pp; 
+    bool isMatch(string &s, string &p){
         n=s.size()   ,m=p.size();
-
-        
+        vector<int>has(m+2);
+        vector<vector<int>>dp(n+2,vector<int>(m+2));
         for(int i=m-1;i>=0;i--){
             if(has[i+1]==0 and p[i]=='*')has[i]=0;
             else has[i]=1;
         }
         
-        // memset(dp,-1,sizeof(dp));
-        // return rec(0,0);
-        
-          
         for(int i=n;i>=0;i--){
               for(int j=m;j>=0;j--){
                  if(i>=n ){
