@@ -23,7 +23,7 @@ class Solution {
     
     
 public:
-    bool isMatch(string &s, string &p){
+    bool isMatch(string s, string p){
         n=s.size()   ,m=p.size();
         vector<int>has(m+2);
         vector<vector<int>>dp(n+2,vector<int>(m+2));
